@@ -20,7 +20,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
-
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -140,7 +139,7 @@ public class WebAPI {
             if (OS.equalsIgnoreCase("OS X")) {
                 System.setProperty("webdriver.chrome.driver", "Drivers/Mac/Chrome/chromedriver-mac-x64/chromedriver");
             } else if (OS.equalsIgnoreCase("Windows")) {
-                System.setProperty("webdriver.chrome.driver", "Drivers/Windows/Chrome/chromedriver-win64/chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", "Drivers/Windows/Chrome/chromedriver-win64/chromedriver");
             }
             driver = new ChromeDriver(options);
         } else if (browserName.equalsIgnoreCase("chrome-options")) {
@@ -472,6 +471,7 @@ public class WebAPI {
     }
 
     public String getTextById(String locator) {
+
         return driver.findElement(By.id(locator)).getText();
     }
 
@@ -676,6 +676,7 @@ public class WebAPI {
     }
 
     public static void implicitWait(int sec) {
+
         driver.manage().timeouts().implicitlyWait(sec, TimeUnit.SECONDS);
     }
 
@@ -685,6 +686,7 @@ public class WebAPI {
     }
 
     public static void windowMaximize() {
+
         driver.manage().window().maximize();
     }
 

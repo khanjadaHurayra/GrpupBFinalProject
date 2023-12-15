@@ -8,32 +8,32 @@ import org.openqa.selenium.support.How;
 import static DummyHTML.WebElements.*;
 
 public class Homepage extends WebAPI {
-    @FindBy (how = How.XPATH, using = userNameXpath )
+    @FindBy(how = How.XPATH, using = userNameXpath)
     public WebElement usernameWebElement;
-    @FindBy (how = How.XPATH, using = passwordXpath )
+    @FindBy(how = How.XPATH, using = passwordXpath)
     public WebElement passwordWebElement;
-    @FindBy (how = How.ID, using = loginButtonID )
+    @FindBy(how = How.ID, using = loginButtonID)
     public WebElement loginBtnWebElement;
 
     // Preparation methods of various steps
-    public void usernameFieldActions(){
+    public void usernameFieldActions() {
         usernameWebElement.click();
         inputValueInTextBoxByWebElement(usernameWebElement, "Username");
     }
 
-    public void passwordFieldActions(){
+    public void passwordFieldActions() {
         passwordWebElement.click();
-        inputValueInTextBoxByWebElement(passwordWebElement,"Password");
+        inputValueInTextBoxByWebElement(passwordWebElement, "Password");
     }
 
-    public void loginButtonClick(){
+    public void loginButtonClick() {
 
         loginBtnWebElement.click();
     }
 
 
     //TestCases
-    public void TestCase1(){
+    public void TestCase1() {
         usernameFieldActions();
         passwordFieldActions();
         loginButtonClick();

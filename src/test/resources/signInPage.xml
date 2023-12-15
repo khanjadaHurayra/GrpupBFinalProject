@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="ebay signIn page Create Functionality" parallel="false">
+
+    <parameter name="useCloudEnv" value="false"/>
+    <parameter name="cloudEnvName" value="browserstack"/>
+    <!--<parameter name="cloudEnvName" value="saucelab"/>-->
+    <!-- <parameter name="os" value="windows"/>-->
+    <parameter name="os" value="OS X"/>
+    <!--<parameter name="os_version" value="10"/>-->
+    <parameter name="os_version" value="Ventura"/>
+    <parameter name="browserName" value="chrome"/>
+    <parameter name="browserVersion" value="119"/>
+
+    <parameter name="url" value="https://www.ebay.com/"/>
+
+    <test name="Ebay signIn Functionality ">
+        <classes>
+            <class name="ebay.SignInPageTestCase"></class>
+
+        </classes>
+
+    </test>
+
+</suite>
