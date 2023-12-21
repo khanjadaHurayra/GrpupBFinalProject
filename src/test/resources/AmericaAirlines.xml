@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 
-<suite name="HomePage DummyHTML Test" parallel="false">
+<suite name="Airlines Home Page  Test" parallel="false">
 
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
@@ -14,11 +14,11 @@
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="119"/>
     <!--<parameter name="url" value="file:/Users/hurayra/Desktop/WEMSUmmerWebpage.html"/>-->
-    <parameter name="url" value="https://www.ebay.com/"/>
+    <parameter name="url" value="https://www.aa.com/homePage.do"/>
 
     <test name="HomePage">
         <classes>
-            <class name="DummyHTML.TestCases"></class>
+            <class name="americanAirlines.AirlinesHomePageTestCases"></class>
 
         </classes>
 

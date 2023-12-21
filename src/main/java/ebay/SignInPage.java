@@ -1,8 +1,10 @@
 package ebay;
+
 import common.WebAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
 import static ebay.WebElements.*;
 
 public class SignInPage extends WebAPI {
@@ -38,8 +40,7 @@ public class SignInPage extends WebAPI {
     public WebElement emailRegistrationSubmitButton;
 
 
-
-    @FindBy(how = How.ID, using =signInButtonID)
+    @FindBy(how = How.ID, using = signInButtonID)
     public WebElement signInButton2;
 
     @FindBy(how = How.ID, using = userfieldID)
@@ -107,27 +108,30 @@ public class SignInPage extends WebAPI {
     }
 
 
-    public void signInOnly(){
+    public void signInOnly() {
         signInButton2.click();
     }
 
-    public void userField(){
+    public void userField() {
         userField.click();
         userField.sendKeys("trrrps2023@gmail.com");
     }
-    public void clickOnContinue(){
+
+    public void clickOnContinue() {
         continueButton.click();
     }
-    public void inputPassField(){
+
+    public void inputPassField() {
         passField.click();
         passField.sendKeys("mairalaamarae2023");
     }
-    public void submitForSignIn(){
+
+    public void submitForSignIn() {
         submitButton.click();
     }
 
 
-    public void signInWithValidCredential(){
+    public void signInWithValidCredential() {
 
         try {
             signInOnly();
@@ -136,8 +140,7 @@ public class SignInPage extends WebAPI {
             inputPassField();
             submitForSignIn();
 
-        }
-        catch(Exception e){
+        } catch (Exception e) {
 
             System.out.println("Its is not possible to automate  bcoz Domain stop to automate it");
         }
@@ -146,15 +149,15 @@ public class SignInPage extends WebAPI {
 
     public void createAccount() throws InterruptedException {
 
-        try{
-        clickOnSignInButton();
-        clickOnCreateOnAccount();
-        inputFirstName();
-        inputLastName();
-        inputEmail();
-        inputPassword();
-        clickOnSubmitButton();}
-        catch(Exception e){
+        try {
+            clickOnSignInButton();
+            clickOnCreateOnAccount();
+            inputFirstName();
+            inputLastName();
+            inputEmail();
+            inputPassword();
+            clickOnSubmitButton();
+        } catch (Exception e) {
             System.out.println("Not possible to Account create on ebay , bcoz automation is controlled by ebay ");
         }
 

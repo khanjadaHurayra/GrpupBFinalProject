@@ -36,6 +36,4 @@ public class WebElements {
     public static final String helpAndSupportXpath = "//td/h3/a[contains(text(),'Help & Contact')]";
 
 
-
-
 }
