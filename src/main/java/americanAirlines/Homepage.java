@@ -14,6 +14,7 @@ public class Homepage extends WebAPI {
 
     public void roundTripChecked(){
         roundTripRadio.isSelected() ;
+        System.out.println("Habib vai");
 
     }
 
