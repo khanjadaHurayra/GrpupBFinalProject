@@ -127,28 +127,38 @@ public class SignInPage extends WebAPI {
     }
 
 
-    public void signInWithValidCradential(){
-        signInOnly();
-        userField();
-        clickOnContinue();
-        inputPassField();
-        submitForSignIn();
+    public void signInWithValidCredential(){
+
+        try {
+            signInOnly();
+            userField();
+            clickOnContinue();
+            inputPassField();
+            submitForSignIn();
+
+        }
+        catch(Exception e){
+
+            System.out.println("Its is not possible to automate  bcoz Domain stop to automate it");
+        }
     }
 
 
-   /* public void createAccount() throws InterruptedException {
+    public void createAccount() throws InterruptedException {
+
+        try{
         clickOnSignInButton();
-       // clickOnSwithToAccount();
         clickOnCreateOnAccount();
-        *//*clickOnBusinessTab();
-        clickOnPersonalTab();*//*
         inputFirstName();
         inputLastName();
         inputEmail();
         inputPassword();
-        clickOnSubmitButton();
+        clickOnSubmitButton();}
+        catch(Exception e){
+            System.out.println("Not possible to Account create on ebay , bcoz automation is controlled by ebay ");
+        }
 
-    }*/
+    }
 
     public void getUrl() throws InterruptedException {
         getCurrentUrl();

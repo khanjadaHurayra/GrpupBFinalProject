@@ -15,11 +15,13 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import reporting.ExtentManager;
 import reporting.ExtentTestManager;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -87,7 +89,6 @@ public class WebAPI {
 
     @AfterSuite
     public void generateReport() {
-
         extent.close();
     }
 
@@ -103,7 +104,7 @@ public class WebAPI {
     public static WebDriver driver = null;
     public String browserstack_username = "khanjada_rTRbtl";
     public String browserstack_accesskey = "bm2dgyj6Kpo4CQirjQ8e";
-    public String saucelabs_username = "monsurahmed1";
+    public String saucelabs_username = "Khanjada";
     public String saucelabs_accesskey = "48bd964a-506f-4ad1-a5f5-f37e060bbea5";
 
 
@@ -327,7 +328,7 @@ public class WebAPI {
 
 
         //create a string variable which will be unique always
-        String df = new SimpleDateFormat("yyyyMMddhhss").format(new Date());
+        String df = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 
         //create object variable of TakeScreenshot class
         TakesScreenshot ts = (TakesScreenshot) driver;
@@ -337,7 +338,7 @@ public class WebAPI {
 
         //store the screen shot path in path variable. Here we are storing the screenshots under screenshots folder
         //String path = "ScreenShot\\" + screenshotName + df + ".png";
-        String path = "/Users/hurayra/Documents/DummyTDDMAven/ScreenShot/" + screenshotName + df + ".png";
+        String path = "/Users/hurayra/IdeaProjects/GroupBFinalProject/ScreenShot/" + screenshotName + df + ".png";
 
         //create another File object variable which points(refer) to the above stored path variable
         File destination = new File(path);
@@ -545,6 +546,7 @@ public class WebAPI {
     }
 
     public void goBackToHomeWindow() {
+
         driver.switchTo().defaultContent();
     }
 
@@ -710,5 +712,12 @@ public class WebAPI {
         Actions actions = new Actions(driver);
         actions.dragAndDrop(To, from).build().perform();
     }
+
+   /* public static void assertion(String actual){
+
+        String expected = driver.getTitle();
+
+        Assert.assertEquals(actual,expected);
+    }*/
 
 }

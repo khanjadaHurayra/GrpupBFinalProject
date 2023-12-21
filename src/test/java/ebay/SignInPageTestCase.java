@@ -13,16 +13,16 @@ public class SignInPageTestCase extends WebAPI {
         signInPage= PageFactory.initElements(driver,SignInPage.class);
     }
 
-   /* @Test(enabled = false)
+    @Test(enabled = true,priority = 1)
     public void testCase1() throws InterruptedException {
         getInitElements();
         signInPage.createAccount();
-    }*/
+    }
 
-    @Test
+    @Test(enabled = true,priority = 2)
     public  void testCase2(){
 
         getInitElements();
-        signInPage.signInWithValidCradential();
+        signInPage.signInWithValidCredential();
     }
 }

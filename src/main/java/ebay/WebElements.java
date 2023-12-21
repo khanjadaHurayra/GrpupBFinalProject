@@ -33,6 +33,9 @@ public class WebElements {
     public static final String stampOptionXpath = "//a[starts-with(@href,'https://www.ebay.com/b/Stam')]";
 
     public static final String twitterLinkXpath = "//a[starts-with(@href,'https://twitter.com/eBay')]";
+    public static final String helpAndSupportXpath = "//td/h3/a[contains(text(),'Help & Contact')]";
+
+
 
 
 }

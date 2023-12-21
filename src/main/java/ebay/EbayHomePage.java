@@ -1,9 +1,11 @@
 package ebay;
+
 import common.WebAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+
 import static ebay.WebElements.*;
 
 
@@ -15,7 +17,7 @@ public class EbayHomePage extends WebAPI {
     @FindBy(how = How.XPATH, using = submitButtonXpath)
     public WebElement submitButtonWebElement;
 
-    @FindBy(how = How.ID, using =backToHomePageLogoID)
+    @FindBy(how = How.ID, using = backToHomePageLogoID)
     public WebElement backToHomePageLogo;
 
     @FindBy(how = How.XPATH, using = collectibleTabXpath)
@@ -27,9 +29,11 @@ public class EbayHomePage extends WebAPI {
     @FindBy(how = How.ID, using = signInButtonID)
     public WebElement signInButton;
 
-    @FindBy(how = How.XPATH, using = twitterLinkXpath )
+    @FindBy(how = How.XPATH, using = twitterLinkXpath)
     public WebElement twitterLink;
 
+    @FindBy(how = How.XPATH, using = helpAndSupportXpath)
+    public WebElement helpAndSupport;
 
 
     public void inputSearchField() {
@@ -43,12 +47,10 @@ public class EbayHomePage extends WebAPI {
 
     }
 
-    public void signInClick(){
+    public void signInClick() {
+
         signInButton.click();
     }
-
-
-
 
 
     public void searchItem() {
@@ -57,7 +59,7 @@ public class EbayHomePage extends WebAPI {
 
     }
 
-    public void clickOnTwitterLink(){
+    public void clickOnTwitterLink() {
         scrollUpDownByHeight();
         twitterLink.click();
     }
@@ -69,11 +71,17 @@ public class EbayHomePage extends WebAPI {
         actions.moveToElement(collectibleTab).build().perform();
         stampOption.click();
 
+
     }
 
+    public void clickOnHelpAndSupport() {
+
+        scrollUpDownByHeight();
+        helpAndSupport.isDisplayed();
+        helpAndSupport.click();
 
 
-
+    }
 
 
     public void getUrl() throws InterruptedException {
