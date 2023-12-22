@@ -10,6 +10,7 @@ public class AirlinesHomePageTestCases extends WebAPI {
     static Homepage homepage;
 
     public static void getInitElements(){
+
         homepage= PageFactory.initElements(driver,Homepage.class);
     }
 
