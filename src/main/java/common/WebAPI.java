@@ -136,6 +136,8 @@ public class WebAPI {
             options.addArguments("--remote-allow-origins=*");
             options.addArguments("start-maximized");
             options.addArguments("--disable-blink-features=AutomationControlled");
+            options.addArguments("disable-notifications");
+
             //options.addArguments("Headless");
             if (OS.equalsIgnoreCase("OS X")) {
                 System.setProperty("webdriver.chrome.driver", "Drivers/Mac/Chrome/chromedriver-mac-x64/chromedriver");

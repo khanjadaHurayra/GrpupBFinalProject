@@ -2,6 +2,7 @@ package americanAirlines;
 
 import common.WebAPI;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class AirlinesHomePageTestCases extends WebAPI {
@@ -16,5 +17,21 @@ public class AirlinesHomePageTestCases extends WebAPI {
     public void verifyRoundTripButtonSelected(){
         getInitElements();
         homepage.roundTripChecked();
+    }
+
+    @Test(priority = 2)
+    public void verifySearchButton(){
+        getInitElements();
+        homepage.clickOnAirportSearch();
+        implicitWait(10);
+        Assert.assertEquals("American Airlines - Airline tickets and low fares at aa.com",driver.getTitle());
+    }
+
+    @Test(priority = 3)
+    public void verifyCountryAndRegionCanSlelect()  {
+
+        getInitElements();
+        homepage.clickOnCityOrAirportSearch();
+
     }
 }
