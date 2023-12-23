@@ -13,8 +13,9 @@ public class FidelityHomePageTest extends WebAPI {
     }
 
     @Test
-    public void verifyCareerOption() {
+    public void verifyCareerOption() throws InterruptedException {
         getInitElements();
         homePage.clickOnCareerLInkOption();
+        System.out.println(driver.getTitle());
     }
 }
