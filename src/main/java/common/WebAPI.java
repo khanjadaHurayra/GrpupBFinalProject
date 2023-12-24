@@ -715,6 +715,12 @@ public class WebAPI {
         actions.dragAndDrop(To, from).build().perform();
     }
 
+
+    public static void selectDropDownByStringValue(WebElement element, String value){
+        Select select = new Select(element);
+        select.selectByVisibleText("");
+    }
+
    /* public static void assertion(String actual){
 
         String expected = driver.getTitle();

@@ -29,7 +29,7 @@ public class HomePageTestCases extends WebAPI {
     }
 
     @Test(priority = 3,alwaysRun = true)
-    public void tesCase3(){
+    public void testCase3(){
         getInitElements();
         homePage.ClickOnSearchButton();
         Assert.assertEquals(driver.getTitle(),"Con Edison - Powering New York City and Westchester");
