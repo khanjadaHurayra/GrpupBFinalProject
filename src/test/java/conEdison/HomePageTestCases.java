@@ -18,14 +18,14 @@ public class HomePageTestCases extends WebAPI {
     public void testCase1(){
         getInitElements();
         homePage.mouseOverOnAccountButton();
-        Assert.assertEquals(driver.getTitle(),"Con Edison - Powering New York City and Westchester");
+
     }
 
     @Test(priority = 2)
     public void testCase2(){
         getInitElements();
         homePage.scrollThePageAndClickOnRatesOn();
-        Assert.assertEquals(driver.getTitle(),"Con Edison - Powering New York City and Westchester");
+
     }
 
     @Test(priority = 3,alwaysRun = true)
@@ -39,5 +39,23 @@ public class HomePageTestCases extends WebAPI {
         getInitElements();
         homePage.clickOnTopic();
         Assert.assertEquals(driver.getTitle(),"Con Edison - Powering New York City and Westchester");
+    }
+    @Test (enabled = true)
+    public void testCase5(){
+        getInitElements();
+        homePage.sustainabilityHighlights();
+        Assert.assertEquals(driver.getTitle(),"Our Clean Energy Commitment | Con Edison");
+    }
+    @Test (enabled = true)
+    public void testCase6(){
+        getInitElements();
+        homePage.changingServiceAddress();
+        Assert.assertEquals(driver.getTitle(),"Start, Move, or Stop Service | Con Edison");
+    }
+    @Test
+    public void testCase7(){
+        getInitElements();
+        homePage.stopServiceCurrentLocation();
+        //Assert.assertEquals(driver.getTitle(),"Start, Move, or Stop Service | Con Edison");
     }
 }

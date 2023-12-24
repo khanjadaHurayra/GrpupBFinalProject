@@ -24,7 +24,6 @@ public class WebElements {
     public static final String flightStatuNegativeResultXpath = "//*[@id='adcNotification_0']/p/text()";
 
 
-
     public static final String bagFeesAndAllowanceXpat = "//a[normalize-space()='Changes to checked bag fees and allowances']";
     public static final String checkBagPolicyXpath = "//div[normalize-space()='Checked bag policy']";
     public static final String delayOrDemageBagsXpath = "//*[@id='aa-content-frame']/section[2]/nav/ul/li[4]/a/div[2]";

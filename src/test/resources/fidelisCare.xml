@@ -7,9 +7,9 @@
     <parameter name="useCloudEnv" value="false"/>
     <parameter name="cloudEnvName" value="browserstack"/>
     <!--<parameter name="cloudEnvName" value="saucelab"/>-->
-<!--    <parameter name="os" value="windows"/>-->
-     <parameter name="os" value="OS X"/>
-<!--    <parameter name="os_version" value="10"/>-->
+    <!--    <parameter name="os" value="windows"/>-->
+    <parameter name="os" value="OS X"/>
+    <!--    <parameter name="os_version" value="10"/>-->
     <parameter name="os_version" value="Ventura"/>
     <parameter name="browserName" value="chrome"/>
     <parameter name="browserVersion" value="119"/>
@@ -19,6 +19,7 @@
 
     <test name="Fidelis Care HomePage search field ">
         <classes>
+
             <class name="fidelisCare.TestCases"></class>
 
         </classes>
